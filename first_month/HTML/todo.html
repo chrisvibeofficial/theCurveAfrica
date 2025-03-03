@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>todo</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body{
+      padding-inline: 10px;
+    }
+    #taskHolder{
+      height: 300px;
+      width: 170px;
+      background: white;
+      margin-top: 10px;
+      padding: 5px;
+      border: 1px solid rgb(197, 192, 192);
+    }
+  </style>
+</head>
+<body>
+  <h1>To Do</h1>
+  <input type="text" placeholder="Enter task" id="input">
+  <button id="doTask" onclick="run()">Add</button>
+  <div id="taskHolder"> </div>
+
+  <script>
+    const input = document.getElementById('input');
+    const doTask = document.getElementById('doTask');
+    const taskHolder = document.getElementById('taskHolder');
+
+    const run = () => {
+      const task = input.value;
+      if (input.value !== ''){
+        const p = document.createElement('P');
+        taskHolder.appendChild(p);
+        p.innerHTML = task;
+        input.value = '';
+      }else {
+        alert('input cannot be empty');
+      }
+    }
+  </script>
+</body>
+</html>

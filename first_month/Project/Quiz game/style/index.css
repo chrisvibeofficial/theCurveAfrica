@@ -1,0 +1,97 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  height: 100vh;
+  width: 100%;
+  background: url(/image/bg.jpg);
+  backdrop-filter: blur(5px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.conTop{
+  width: 100%;
+  height: 50%;
+  /* background: lightblue; */
+  font-family: tahoma;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.quizGame{
+  font-size: 70px;
+  margin-bottom: 20px;
+}
+
+.for{
+  font-size: 65px;
+  color: white;
+}
+
+input{
+  width: 60%;
+  height: 20%;
+  margin-top: 30px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  padding-left: 20px;
+  font-size: 20px;
+  color: gray;
+}
+
+.conCenter{
+  width: 100%;
+  height: 20%;
+  /* background: lightpink; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnLink{
+  width: 15%;
+  height: 50%;
+}
+
+button{
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  border: none;
+  background: rgb(7, 100, 192);
+  color: white;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+button:hover{
+  background: rgb(7, 80, 153);
+  cursor: pointer;
+}
+
+.conDown{
+  width: 100%;
+  height: 20%;
+  /* background: lightgreen; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aboutLink{
+  /* text-decoration: none; */
+  font-size: 25px;
+  color: white;
+}
+
+.aboutLink:hover{
+  color: rgb(7, 100, 192);
+}
