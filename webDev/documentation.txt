@@ -1,0 +1,20 @@
+Can you please help me with documentation, with possible error messages and responses. theses are my codes below
+
+this is the api:
+...enter your api...
+
+firstController:
+...enter first controller...
+
+firstRouter:
+...enter first router...
+
+secondController:
+...enter second controller...
+
+expensesRouter:
+...enter second router...
+
+
+
+more controller and router

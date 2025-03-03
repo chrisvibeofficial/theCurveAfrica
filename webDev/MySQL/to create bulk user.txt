@@ -1,0 +1,88 @@
+to create bulk user
+
+
+url = https://curveapp.onrender.com/api/v1/multiple
+
+
+method=  post
+
+
+sample requestbody =
+[{
+    "fullName":"Daniella Obinna",
+    "age":12,
+    "isMarried":true,
+    "sex":"Female"
+},
+
+{
+    "fullName":"Mercy Okafor",
+    "age":10,
+    "isMarried":false,
+    "sex":"Female"
+},
+
+{
+    "fullName":"Chris Blessing",
+    "age":15,
+    "isMarried":false,
+    "sex":"Male"
+},
+
+{
+    "fullName":"Ebuka Zainab",
+    "age":10,
+    "isMarried":true,
+    "sex":"Male"
+},
+
+{
+    "fullName":"Pablo  Joy",
+    "age":14,
+    "isMarried":false,
+    "sex":"Male"
+}
+
+]
+sample response
+
+{
+    "message": "multiple user created",
+    "data": [
+        {
+            "fullName": "Daniella Obinna",
+            "age": 12,
+            "isMarried": true,
+            "sex": "Female",
+            "id": "0bf56d8c-f410-4077-b163-6b9c511146f9"
+        },
+        {
+            "fullName": "Mercy Okafor",
+            "age": 10,
+            "isMarried": false,
+            "sex": "Female",
+            "id": "691d8083-eae6-47a8-8392-cc1a73712efe"
+        },
+        {
+            "fullName": "Chris Blessing",
+            "age": 15,
+            "isMarried": false,
+            "sex": "Male",
+            "id": "34931967-5ae4-49a2-968c-d043473e0866"
+        },
+        {
+            "fullName": "Ebuka Zainab",
+            "age": 10,
+            "isMarried": true,
+            "sex": "Male",
+            "id": "51240491-dd36-4be0-b905-252588658245"
+        },
+        {
+            "fullName": "Pablo  Joy",
+            "age": 14,
+            "isMarried": false,
+            "sex": "Male",
+            "id": "b41a6b5a-a71b-4849-b751-f5f9cd8895de"
+        }
+    ]
+}
