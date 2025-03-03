@@ -1,0 +1,24 @@
+{
+  "development": {
+    "username": "sql8759379",
+    "password": "x4njfdipLh",
+    "database": "sql8759379",
+    "host": "sql8.freesqldatabase.com",
+    "dialect": "mysql"
+  
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "sql8759379",
+    "password": "x4njfdipLh",
+    "database": "sql8759379",
+    "host": "sql8.freesqldatabase.com",
+    "dialect": "mysql"
+  }
+}
