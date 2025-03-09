@@ -1,16 +1,18 @@
-const userModel = require('../models/userModel');
+const userModel = require('../models/user');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const cloudinary = require('../config/cloudinary');
 const fs = require('fs');
 const { verifyMail, forgotPassword } = require('../helper/verifyMail');
 const { mailSender } = require('../middlewares/nodemailer');
+const { validate } = require('../helper/validate');
+const { registerValidateSchema, loginValidateSchema } = require('../validation/user');
 
 
 exports.register = async (req, res) => {
   try {
-    const { fullName, email, userName, password, gender } = req.body;
-    const file = req.file;
+    const validated = await validate(req.body, registerValidateSchema);
+    const { fullName, email, userName, password, gender } = validated;
 
     const existingUser = await userModel.findOne({ $or: [{ email: email.toLowerCase() }, { userName: userName.toLowerCase() }] });
 
@@ -146,7 +148,8 @@ exports.verifyAccount = async (req, res) => {
 
 exports.loginAccout = async (req, res) => {
   try {
-    const { email, userName, password } = req.body;
+    const validated = await validate(req.body, loginValidateSchema);
+    const { email, userName, password } = validated;
     const user = await userModel.findOne({ $or: [{ userName: userName }, { email: email.toLowerCase() }] });
 
     if (user.email === null && user.userName === null) {
